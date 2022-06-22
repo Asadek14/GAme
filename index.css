@@ -1,0 +1,161 @@
+*{
+
+    font-family: cursive;
+}
+
+body{
+
+    height:97.2vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(194, 128, 253);
+    background-image: linear-gradient(to bottom right, rgb(22, 57, 235), rgb(221, 221, 221));
+}
+
+.menu{
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 20% 20% 20% 15%;
+    place-items: center;
+    position: relative;
+    width:300px;
+    height: 50%;
+    border: solid 5px;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, rgb(212, 81, 212),rgb(139, 26, 245));
+}
+
+.TikTakToe{
+
+    width: 60%;
+    height: 60%;
+    border-color: rgb(0, 0, 0);
+    box-shadow: 0px 3px 2px #000000cc;
+    background-color: rgb(248, 203, 79);
+    background-image:  linear-gradient(to bottom, rgb(255, 209, 82), rgb(225, 255, 0));
+}
+
+.TikTakToe:hover{
+
+    background-image:  linear-gradient(to top, rgb(212, 81, 212),rgb(139, 26, 245));
+} 
+
+.TikTakToe:active{
+
+    margin-top: 3px;
+    box-shadow: 0px 0px 0px black
+}
+
+.header{
+
+    font-size: x-large;
+}
+
+.commingSoon{
+
+    width: 60%;
+    height: 60%;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(248, 203, 79);
+    background-image:  linear-gradient(to bottom, rgb(255, 255, 255), rgb(129, 129, 129));
+    pointer-events: none;
+}
+
+.TikTakToe-Menu{
+
+    position: absolute;
+    display: none;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 20% 20% 25%;
+    place-items: center;
+    background-image:  linear-gradient(to bottom, rgb(254, 187, 254),rgb(96, 73, 117));
+    border: solid 4px;
+    border-radius: 5%;
+    height: 80%;
+    width: 70%;
+}
+
+#DevPassInput{
+
+    width:30%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: solid 2px;
+    border-radius: 3%;
+    background-color: rgba(255, 255, 255, 0.518);
+}
+
+.start, .back{
+    width:70%;
+    height:80%;
+    border-color: rgb(0, 0, 0);
+    box-shadow: 0px 3px 2px #000000cc;
+    background-color: rgb(248, 203, 79);
+    background-image:  linear-gradient(to bottom, rgb(255, 209, 82), rgb(225, 255, 0));
+}
+
+.start:hover, .back:hover, #SubmitDevPass:hover{
+
+    background-image:  linear-gradient(to top, rgb(212, 81, 212),rgb(139, 26, 245));
+} 
+
+#SubmitDevPass{
+
+    text-align: center;
+    width:20%;
+    height:80%;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(248, 203, 79);
+    background-image:  linear-gradient(to bottom, rgb(255, 209, 82), rgb(225, 255, 0));
+    
+}
+
+.start:active{
+
+    margin-top: 3px;
+    box-shadow: 0px 0px 0px black
+}
+
+.back:active{
+
+    margin-top: 13px;
+    box-shadow: 0px 0px 0px black
+}
+
+
+.devPass{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    width:90%
+}
+
+.back{
+
+    margin-top: 10px;
+}
+
+.start{
+
+    margin-bottom: 10px;
+}
+
+.gameheader{
+
+    font-size: larger;
+    margin-bottom: 5px;
+}
+
+@keyframes TTTMenuOpen {
+
+    from{height: 0%; width: 0%}
+    to{height: 80%; width:70%};
+}
+
+@keyframes TTTMenuClose {
+
+    from{height: 80%; width:70%}
+    to{height: 0%; width: 0%};
+}

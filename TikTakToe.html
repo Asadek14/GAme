@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTakToe</title>
+    <link rel="stylesheet" href="TikTakToe.css">
+</head>
+<body>
+    
+<div class="game">
+    <h1 class="header">TikTakToe</h1>
+    <div class="board sync">
+        <div class="grids"></div>
+        <button type="button" data-index="1" class=input id=input1 onclick="TikTakToe(id)"></button>
+        <button type="button" data-index="2" class=input id=input2 onclick="TikTakToe(id)"></button>
+        <button type="button" data-index="3" class=input id=input3 onclick="TikTakToe(id)"></button>
+        <button type="button" data-index="4" class=input id=input4 onclick="TikTakToe(id)"></button>
+        <button type="button" data-index="5" class=input id=input5 onclick="TikTakToe(id)"></button>
+        <button type="button" data-index="6" class=input id=input6 onclick="TikTakToe(id)"></button>
+        <button type="button" data-index="7" class=input id=input7 onclick="TikTakToe(id)"></button>
+        <button type="button" data-index="8" class=input id=input8 onclick="TikTakToe(id)"></button>
+        <button type="button" data-index="9" class=input id=input9 onclick="TikTakToe(id)"></button>
+        <div class="strike" id="strike"></div>
+        <div class="gameOver" id="gameOver">
+            <div class="message" id="message">Player <b id="winner"></b> Won</div>
+        </div>
+    </div>
+    <button type="button" class="restart sync" onclick="document.location.reload()"><b>Restart</b></button>
+    <button type="button" class="exit sync" onclick="location.href='./index.html'"><b>Exit</b></button>
+
+</div>
+
+<script type="module" src="TikTakToe.js"></script>
+
+</body>
+</html>
