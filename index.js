@@ -23,21 +23,10 @@ function closeWindow(){
     TikTakToeMenu.style.display = "none"
 }
 
-window.TikTakToeMenuOpen = TikTakToeMenuOpen;
-window.TikTakToeMenuClose = TikTakToeMenuClose;
-
-
-// let InputValue = ' ';
-
-// document.getElementById('SubmitDevPass').addEventListener("click", myFunction);
-
-// function myFunction(){
-
-//     InputValue = (document.getElementById('DevPassInput').value);
-// }
-
-// window.InputValue = InputValue;
-
-
-// export {InputValue}
-
+let form = document.getElementById('devPass');
+form.addEventListener('submit', function(event){
+        event.preventDefault();
+        document.getElementById('TikTakToeStart').addEventListener('click', function(){
+            form.submit();
+        })
+})
