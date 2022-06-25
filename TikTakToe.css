@@ -2,6 +2,8 @@
 
     margin:0px;
     padding:0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 body{
@@ -33,7 +35,6 @@ body{
 .restart, .exit{
 
     font-size: larger;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: 71.5px;;
     width: 150px;
     height: 40px;;
@@ -81,7 +82,6 @@ body{
     font-size: 35px;
     color:rgb(0, 0, 0);
     text-shadow: 1.5px 1.5px 2px #fd6eff, 2px 2px 0.5px #000000;
-    font-family: cursive;
 }
 
 
@@ -140,7 +140,6 @@ body{
     text-align: center;
     color:rgb(0, 0, 0);
     text-shadow: 2px 2px 3px #ff76e1cc, 2px 2px 1px #000000cc;
-    font-family:cursive;
 
 }
 
