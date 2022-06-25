@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TikTakToe</title>
     <link rel="stylesheet" href="TikTakToe.css">
+    <link rel="stylesheet" href="GameOverMaja.css">
 </head>
 <body>
     
@@ -24,7 +25,9 @@
         <button type="button" data-index="9" class=input id=input9 onclick="TikTakToe(id)"></button>
         <div class="strike" id="strike"></div>
         <div class="gameOver" id="gameOver">
-            <div class="message" id="message">Player <b id="winner"></b> Won</div>
+            <div class="message" id="message">
+                <div class="messageContent" id="messageContent">Player <b id="winner"></b> Won</div>
+            </div>
         </div>
     </div>
     <button type="button" class="restart sync" onclick="document.location.reload()"><b>Restart</b></button>
@@ -32,7 +35,7 @@
 
 </div>
 
-<script type="module" src="TikTakToe.js"></script>
+<script src="TikTakToe.js"></script>
 
 </body>
 </html>
