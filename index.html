@@ -10,22 +10,22 @@
 <body>
 
     <div class="menu">
-        <div class="header">Menu</div>
+        <div class="header" id="header-index">Menu</div>
         <button type="button" class="TikTakToe" id="TikTakToe" onclick="TikTakToeMenuOpen()"><b>TikTakToe</b></button>
         <button class="commingSoon">Comming Soon</button>
         <button class="commingSoon">Comming Soon</button>
 
         <div class="TikTakToe-Menu" id="TikTakToe-Menu">
             <div class="gameheader"><b>TikTakToe</b></div>
-            <button type="button" class="start" onclick="location.href='./TikTakToe.html'"><b>Start</b></button>
+            <button type="button" class="start" id="TikTakToeStart" onclick="location.href='./TikTakToe.html'"><b>Start</b></button>
             <button type="button" class="back" onclick="TikTakToeMenuClose()"><b>Back</b></button>
-            <div class="devPass" id="devPass">
+            <form id="devPass" type=get action="TikTakToe.html">
                 <label for="DevPassInput" id="DevPassLabel"><b>DevPass</b></label>
-                <input type="text" class="DevPassInput" id="DevPassInput"></input>
-                <button type="button" id="SubmitDevPass">Ok</button>
-            </div>
+                <input type="text" class="DevPassInput" name="DevPassInput" id="DevPassInput" placeholder="Password"/>
+                <input type="submit" value="OK" id="SubmitPassword"/>
+            </form>
         </div>
     </div>
-    <script type="module" src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
