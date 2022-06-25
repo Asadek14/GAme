@@ -109,7 +109,7 @@ function CheckForWin(){
     if(!win && filledTiles == 9)
     {
 
-        if(InputValue == 'maja' || InputValue == 'Maja')
+        if(InputValue == 'Maja' || InputValue == 'maja')
         setTimeout(Maja, 1000);
 
         else{
