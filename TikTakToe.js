@@ -1,4 +1,15 @@
-//import { InputValue as inputvalue } from "./index.js";
+let InputValue;
+
+window.addEventListener('load', () => {
+
+    //Either one works
+    const params = new URLSearchParams(location.search);
+    //const params = (new URL(document.location)).searchParams
+
+    InputValue = params.get('DevPassInput');
+    console.log(InputValue);
+})
+
 const tiles = document.querySelectorAll(".input");
 
 const board = new Array(tiles.length);
@@ -7,13 +18,13 @@ board.fill(null);
 const AUUGHH1 = new Audio("Sounds/AUUGHH1.MP3");
 const AUUGHH2 = new Audio("Sounds/AUUGHH2.MP3");
 const happyBirthDay = new Audio("Sounds/Happy Birthday.MP3");
-window.happyBirthDay = happyBirthDay;
 const clickSound = new Audio("Sounds/Clicking Sound.MP3");
 let AUUGHH = 'AUUGHH1';
 
 const strike = document.getElementById('strike');
 const gameOver = document.getElementById('gameOver');
 const message = document.getElementById('message');
+const messageContent = document.getElementById('messageContent');
 const winner = document.getElementById('winner');
 let filledTiles = 0;
 let turn = 0;
@@ -42,8 +53,6 @@ function TikTakToe(input){
 
     CheckForWin();
 };
-
-window.TikTakToe = TikTakToe
 
 /* Tiles Representation:
       [1][2][3]
@@ -75,30 +84,40 @@ function CheckForWin(){
         {
             if(inputValue1 == inputValue2 && inputValue2 == inputValue3)
             {
+
                 win = true
                 strike.classList.add(strikeType);
                 tiles.forEach(tile => {tile.style.pointerEvents = "none"});
-                setTimeout(GameOver, 1000);
-                message.classList.add('message-win');
+
+                if(InputValue == 'maja')
+                    setTimeout(Maja, 1000);
+
+                else{
                 
-                // console.log(condition);
-                // if(condition == "Test")
-                // happyBirthDay.play();
-
-
+                setTimeout(GameOver, 1000);
+                //message.classList.add('message-win');
+                
                 if(inputValue1 == 'x')
                 winner.innerHTML = 'X';
                 else
                 winner.innerHTML = 'O';
+                }
             }
         }
     });
 
     if(!win && filledTiles == 9)
     {
-    setTimeout(GameOver, 1000);
-    message.classList.add('message-draw');
-    message.innerHTML = 'Draw';
+
+        if(InputValue == 'maja')
+        setTimeout(Maja, 1000);
+
+        else{
+        setTimeout(GameOver, 1000);
+        //message.classList.add('message-draw');
+        messageContent.innerHTML = 'Draw';
+
+        }
     }
 }
 
@@ -117,4 +136,12 @@ function PlayAUUGHHSound(){
     AUUGHH2.play();
     AUUGHH = 'AUUGHH1';
     }
+}
+
+function Maja(){
+
+    document.getElementById('messageContent').innerHTML = 'Maja always wins!';
+    document.getElementById('gameOver').classList.add('gameOverMaja');
+    document.getElementById('gameOver').style.display = "flex";
+    message.classList.add('messageMaja');
 }
