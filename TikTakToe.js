@@ -89,7 +89,7 @@ function CheckForWin(){
                 strike.classList.add(strikeType);
                 tiles.forEach(tile => {tile.style.pointerEvents = "none"});
 
-                if(InputValue == 'maja')
+                if(InputValue == 'Maja' || InputValue == 'maja')
                     setTimeout(Maja, 1000);
 
                 else{
