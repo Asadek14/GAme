@@ -81,7 +81,7 @@ body{
     font-size: 35px;
     color:rgb(0, 0, 0);
     text-shadow: 1.5px 1.5px 2px #fd6eff, 2px 2px 0.5px #000000;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
 }
 
 
@@ -120,18 +120,28 @@ body{
 
 .message{
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:x-large;
     width: 60%;
+    height: 50%;
     background-color:rgb(249, 155, 155);
     background-image: linear-gradient(to bottom right, #ff8000, rgb(225, 255, 0));
     border: solid 5px;
     border-radius: 10%;
-    text-align: center;
-    font-size:x-large;
-    color:rgb(0, 0, 0);
-    text-shadow: 2px 2px 3px #ff76e1cc, 2px 2px 1px #000000cc;
     box-shadow: 2px 3px 9px rgb(0, 0, 0);
     border-color:rgb(0, 0, 0);;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.messageContent{
+
+    text-align: center;
+    color:rgb(0, 0, 0);
+    text-shadow: 2px 2px 3px #ff76e1cc, 2px 2px 1px #000000cc;
+    font-family:cursive;
+
 }
 
 .message-win{
