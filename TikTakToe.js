@@ -39,7 +39,16 @@ function TikTakToe(input){
 
     if(InputValue == 'Sameh22')
     {
-        XOBirthdayReplacement()
+        if(turn % 2 == 0){
+        tile.classList.add('xBirthday');
+        board[tileNumber - 1] = 'x';
+        }
+    
+        else{
+        tile.classList.add('oBirthday');
+        board[tileNumber - 1] = 'o';
+        //PlayAUUGHHSound()
+    }
     }
     else
     {
