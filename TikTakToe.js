@@ -26,24 +26,34 @@ const gameOver = document.getElementById('gameOver');
 const message = document.getElementById('message');
 const messageContent = document.getElementById('messageContent');
 const winner = document.getElementById('winner');
+let tile;
+let tileNumber;
 let filledTiles = 0;
 let turn = 0;
 let win = false;
 
 function TikTakToe(input){
 
-    const tile = document.getElementById(input);
-    const tileNumber = document.getElementById(input).dataset.index;
+    tile = document.getElementById(input);
+    tileNumber = document.getElementById(input).dataset.index;
 
-    if(turn % 2 == 0){
-    tile.classList.add('x');
-    board[tileNumber - 1] = 'x';
+    if(InputValue == 'Sameh22')
+    {
+        XOBirthdayReplacement()
     }
+    else
+    {
 
-    else{
-    tile.classList.add('o');
-    board[tileNumber - 1] = 'o';
-    //PlayAUUGHHSound()
+        if(turn % 2 == 0){
+        tile.classList.add('x');
+        board[tileNumber - 1] = 'x';
+        }
+
+        else{
+        tile.classList.add('o');
+        board[tileNumber - 1] = 'o';
+        //PlayAUUGHHSound()
+        }
     }
 
     clickSound.play();
@@ -89,9 +99,10 @@ function CheckForWin(){
                 strike.classList.add(strikeType);
                 tiles.forEach(tile => {tile.style.pointerEvents = "none"});
 
-                if(InputValue == 'Maja' || InputValue == 'maja')
+                if(InputValue == 'Sameh22')
+                    setTimeout(Birthday, 1000);
+                else if(InputValue == 'maja')
                     setTimeout(Maja, 1000);
-
                 else{
                 
                 setTimeout(GameOver, 1000);
@@ -109,13 +120,16 @@ function CheckForWin(){
     if(!win && filledTiles == 9)
     {
 
-        if(InputValue == 'Maja' || InputValue == 'maja')
-        setTimeout(Maja, 1000);
+        if(InputValue == 'Sameh22')
+            setTimeout(Birthday, 1000);
+
+        else if(InputValue == 'maja')
+            setTimeout(Maja, 1000);
 
         else{
-        setTimeout(GameOver, 1000);
-        //message.classList.add('message-draw');
-        messageContent.innerHTML = 'Draw';
+            setTimeout(GameOver, 1000);
+            //message.classList.add('message-draw');
+            messageContent.innerHTML = 'Draw';
 
         }
     }
@@ -123,6 +137,11 @@ function CheckForWin(){
 
 function GameOver(){
     gameOver.style.display = "flex";
+}
+
+function GameOverBirthday(){
+
+    gameOver.style.display = "flex"
 }
 
 function PlayAUUGHHSound(){
@@ -144,4 +163,27 @@ function Maja(){
     document.getElementById('gameOver').classList.add('gameOverMaja');
     document.getElementById('gameOver').style.display = "flex";
     message.classList.add('messageMaja');
+}
+
+function Birthday(){
+
+    document.getElementById('messageContent').innerHTML = 'Happy Birthday Baba🎉 - 22/6/2022';
+    document.getElementById('gameOver').classList.add('gameOverBirthDay');
+    document.getElementById('gameOver').style.display = "flex";
+    message.classList.add('messageBirthday');
+}
+
+function XOBirthdayReplacement(){
+
+
+    if(turn % 2 == 0){
+        tile.classList.add('xBirthday');
+        board[tileNumber - 1] = 'x';
+        }
+    
+        else{
+        tile.classList.add('oBirthday');
+        board[tileNumber - 1] = 'o';
+        //PlayAUUGHHSound()
+    }
 }
