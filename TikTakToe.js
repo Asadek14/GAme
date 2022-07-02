@@ -56,7 +56,7 @@ function TikTakToe(input){
         }
     }
 
-    clickSound.play();
+    //clickSound.play();
     tile.style.pointerEvents = "none";
     filledTiles++;
     turn++;
